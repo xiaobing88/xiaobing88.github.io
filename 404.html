@@ -300,11 +300,6 @@
           
   <div class="comments" id="comments">
     
-     
-       <div onclick="ShowGitment()" id="gitment-display-button">显示 Gitment 评论</div>
-       <div id="gitment-container" style="display:none"></div>
-     
-    
   </div>
 
 
@@ -354,7 +349,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -608,30 +603,31 @@
 
 
 
-   
-   
-   
-   
-   <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
-   <script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
-   
-       <script type="text/javascript">
-           function ShowGitment(){
-               document.getElementById("gitment-display-button").style.display = "none";
-               document.getElementById("gitment-container").style.display = "block";
-               var gitment = new Gitment({
-                   id: document.location.href, 
-                   owner: 'xiaobing88',
-                   repo: 'git@github.com:xiaobing88/xiaobing88.github.io.git',
-                   oauth: {
-                       client_id: 'dd238629fa18bcc7041b',
-                       client_secret: '7c3f919a7b9605731a4d8f8cd30ed1849eb64b5d',
-                   }});
-               gitment.render('gitment-container');
-           }
-       </script>
-   
 
+   
+     
+   
+  
+    <!-- 来必力City版安装代码 -->
+    <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzEwNC85NjYz">
+      <script type="text/javascript">
+       (function(d, s) {
+           var j, e = d.getElementsByTagName(s)[0];
+
+           if (typeof LivereTower === 'function') { return; }
+
+           j = d.createElement(s);
+           j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+           j.async = true;
+
+           e.parentNode.insertBefore(j, e);
+       })(document, 'script');
+      </script>
+    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div>
+    <!-- City版安装代码已完成 -->
+   
+ 
 
   
 
