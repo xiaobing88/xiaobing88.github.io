@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Windows10无法使用系统的调节亮度功能]]></title>
+    <url>%2F2018%2F01%2F10%2FWindows10%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%B0%83%E8%8A%82%E4%BA%AE%E5%BA%A6%E5%8A%9F%E8%83%BD%2F</url>
+    <content type="text"><![CDATA[##Windows10无法调节亮度 查看电脑是否安装teamviewer等监控软件。 卸载它自带的驱动 方法如下 在菜单栏里选择 其他 &gt; 选项 &gt; 高级 &gt; “高级网络设置” &gt; “卸载…” 即可 卸载它的监控驱动吧。 ##感激https://www.zhihu.com/question/33767047]]></content>
+      <categories>
+        <category>电脑故障</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CentOS7安装Python3.6]]></title>
+    <url>%2F2018%2F01%2F10%2FCentOS7%E5%AE%89%E8%A3%85Python3-6%2F</url>
+    <content type="text"><![CDATA[安装python3.6可能使用的依赖1yum install openssl-devel bzip2-devel expat-devel gdbm-devel readline-devel sqlite-devel gcc 下载python3.6编译安装到python官网下载https://www.python.org下载最新版源码，使用make altinstall，如果使用make install，在系统中将会有两个不同版本的Python在/usr/bin/目录中。这将会导致很多问题，而且不好处理。1wget https://www.python.org/ftp/python/3.6.0/Python-3.6.0.tgz 1tar -xzvf Python-3.6.0.tgz -C /tmp 1cd /tmp/Python-3.6.0/ 把Python3.6安装到 /usr/local 目录1./configure --prefix=/usr/local 1make 1make altinstall python3.6程序的执行文件：/usr/local/bin/python3.6python3.6应用程序目录：/usr/local/lib/python3.6pip3的执行文件：/usr/local/bin/pip3.6pyenv3的执行文件：/usr/local/bin/pyenv-3.6 更改/usr/bin/python链接1cd/usr/bin 1mv python python.backup 1ln -s /usr/local/bin/python3.6 /usr/bin/python 1ln -s /usr/local/bin/python3.6 /usr/bin/python3 更改yum脚本的python依赖1cd /usr/bin 1ls yum* 1yum yum-config-manager yum-debug-restore yum-groups-manager 1yum-builddep yum-debug-dump yumdownloader 更改以上文件头为1#!/usr/bin/python 改为 #!/usr/bin/python2 修改gnome-tweak-tool配置文件12# vi /usr/bin/gnome-tweak-tool#!/usr/bin/python 改为 #!/usr/bin/python2 修改urlgrabber配置文件1# vi /usr/libexec/urlgrabber-ext-down 1#!/usr/bin/python 改为 #!/usr/bin/python2]]></content>
+      <categories>
+        <category>编程技术</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[我的世界开始]]></title>
+    <url>%2F2018%2F01%2F09%2F%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E5%BC%80%E5%A7%8B%2F</url>
+    <content type="text"><![CDATA[我的blog欢迎你的到来！ origin]]></content>
+      <categories>
+        <category>生活随记</category>
+      </categories>
+      <tags>
+        <tag>起始</tag>
+      </tags>
+  </entry>
+</search>
