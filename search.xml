@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[python的isinstance方法]]></title>
+    <url>%2F2018%2F01%2F12%2Fpython%E7%9A%84isinstance%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[Python的isinstance方法12&gt;&gt;&gt; dir(isinstance)['__call__', '__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__name__', '__ne__', '__new__', '__qualname__', '__reduce__', '__reduce_ex__', '__repr__', '__self__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__text_signature__'] 123456789&gt;&gt;&gt; help(isinstance)Help on built-in function isinstance in module builtins:isinstance(obj, class_or_tuple, /) Return whether an object is an instance of a class or of a subclass thereof. A tuple, as in ``isinstance(x, (A, B, ...))``, may be given as the target to check against. This is equivalent to ``isinstance(x, A) or isinstance(x, B) or ...`` etc. isinstance 用法12345&gt;&gt;&gt; isinstance(1, int)True&gt;&gt;&gt; isinstance("risk2s", str)True&gt;&gt;&gt;]]></content>
+      <categories>
+        <category>编程技术</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[Windows10无法使用系统的调节亮度功能]]></title>
     <url>%2F2018%2F01%2F10%2FWindows10%E6%97%A0%E6%B3%95%E4%BD%BF%E7%94%A8%E7%B3%BB%E7%BB%9F%E7%9A%84%E8%B0%83%E8%8A%82%E4%BA%AE%E5%BA%A6%E5%8A%9F%E8%83%BD%2F</url>
     <content type="text"><![CDATA[##Windows10无法调节亮度 查看电脑是否安装teamviewer等监控软件。 卸载它自带的驱动 方法如下 在菜单栏里选择 其他 &gt; 选项 &gt; 高级 &gt; “高级网络设置” &gt; “卸载…” 即可 卸载它的监控驱动吧。 ##感激https://www.zhihu.com/question/33767047]]></content>
