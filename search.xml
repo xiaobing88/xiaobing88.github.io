@@ -4,11 +4,23 @@
     <title><![CDATA[git提交LF will be replaced by CRLF 错误]]></title>
     <url>%2F2018%2F01%2F23%2Fgit%E6%8F%90%E4%BA%A4LF-will-be-replaced-by-CRLF-%E9%94%99%E8%AF%AF%2F</url>
     <content type="text"><![CDATA[当我使用hexo d -g时出现错误，12warning: LF will be replaced by CRLF in tags/index.html.The file will have its original line endings in your working directory. 接下来四步即可： git config core.autocrlf truegit config –global core.autocrlf truegit config –global core.autocrlf inputgit config –global core.autocrlf false]]></content>
+      <categories>
+        <category>电脑故障</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Python的工作路径问题]]></title>
     <url>%2F2018%2F01%2F23%2FPython%E7%9A%84%E5%B7%A5%E4%BD%9C%E8%B7%AF%E5%BE%84%E9%97%AE%E9%A2%98%2F</url>
     <content type="text"><![CDATA[python文件路径谨慎使用中文路径。Windows下路径使用反斜杠\，python中反斜杠\有转义功能。 路径使用斜杠/ 转义反斜杠\ 原始字符串raw string r”……” python 绝对路径、相对路径绝对路径 os.path.abspath(“文件名”)相对路径 os.path.dirname(“文件名”) python 在不同层级目录import 模块 sys.path添加import目录 导入模块关键是能够根据sys.path环境变量的 Django的搜索路径与Import机制 Python 中，每个 py 文件被称之为模块，每个具有 init.py 文件的目录被称为包。只要模块或者包所在的目录在 sys.path 中，就可以使用 import 模块或 import 包来使用。]]></content>
+      <categories>
+        <category>电脑故障</category>
+      </categories>
+      <tags>
+        <tag>技术</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Windows包管理工具Chocolatey]]></title>
