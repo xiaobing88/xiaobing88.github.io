@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NT" />
+  <meta name="keywords" content="机器学习," />
 
 
 
@@ -94,17 +94,23 @@
 
 
 
-<meta name="description" content="安装python3.6可能使用的依赖1yum install openssl-devel bzip2-devel expat-devel gdbm-devel readline-devel sqlite-devel gcc 下载python3.6编译安装到python官网下载https://www.python.org下载最新版源码，使用make altinstall，如果使用make insta">
+<meta name="description" content="前言验证码识别涉及很多方面的内容。入手难度大,但是入手后,可拓展性又非常广泛,可玩性极强,成就感也很足。 验证码内的字符识别主要以机器学习的分类算法来完成,目前我所利用的字符识别的算法为KNN(K邻近算法)和SVM (支持向量机算法) 本文使用SVM，适合初学者，简单易懂，效果显著 准备工具 Python3.6 libsvm （svm机器学习库） PIL    （图像处理库）  大致流程 抓取原始">
+<meta name="keywords" content="机器学习">
 <meta property="og:type" content="article">
-<meta property="og:title" content="CentOS7安装Python3.6">
-<meta property="og:url" content="http://yoursite.com/2018/01/10/CentOS7安装Python3-6/index.html">
+<meta property="og:title" content="教务处引起的验证码识别的机器学习-Python版本">
+<meta property="og:url" content="http://yoursite.com/2018/01/27/教务处引起的验证码识别的机器学习-Python版本/index.html">
 <meta property="og:site_name" content="Risk2S">
-<meta property="og:description" content="安装python3.6可能使用的依赖1yum install openssl-devel bzip2-devel expat-devel gdbm-devel readline-devel sqlite-devel gcc 下载python3.6编译安装到python官网下载https://www.python.org下载最新版源码，使用make altinstall，如果使用make insta">
+<meta property="og:description" content="前言验证码识别涉及很多方面的内容。入手难度大,但是入手后,可拓展性又非常广泛,可玩性极强,成就感也很足。 验证码内的字符识别主要以机器学习的分类算法来完成,目前我所利用的字符识别的算法为KNN(K邻近算法)和SVM (支持向量机算法) 本文使用SVM，适合初学者，简单易懂，效果显著 准备工具 Python3.6 libsvm （svm机器学习库） PIL    （图像处理库）  大致流程 抓取原始">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-10T04:01:43.719Z">
+<meta property="og:image" content="https://i.imgur.com/eBjR8i1.jpg">
+<meta property="og:image" content="https://i.imgur.com/pM8H3NF.jpg">
+<meta property="og:image" content="https://i.imgur.com/0tO8tBQ.jpg">
+<meta property="og:image" content="https://i.imgur.com/RbwkbIe.jpg">
+<meta property="og:updated_time" content="2018-01-27T07:25:10.487Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CentOS7安装Python3.6">
-<meta name="twitter:description" content="安装python3.6可能使用的依赖1yum install openssl-devel bzip2-devel expat-devel gdbm-devel readline-devel sqlite-devel gcc 下载python3.6编译安装到python官网下载https://www.python.org下载最新版源码，使用make altinstall，如果使用make insta">
+<meta name="twitter:title" content="教务处引起的验证码识别的机器学习-Python版本">
+<meta name="twitter:description" content="前言验证码识别涉及很多方面的内容。入手难度大,但是入手后,可拓展性又非常广泛,可玩性极强,成就感也很足。 验证码内的字符识别主要以机器学习的分类算法来完成,目前我所利用的字符识别的算法为KNN(K邻近算法)和SVM (支持向量机算法) 本文使用SVM，适合初学者，简单易懂，效果显著 准备工具 Python3.6 libsvm （svm机器学习库） PIL    （图像处理库）  大致流程 抓取原始">
+<meta name="twitter:image" content="https://i.imgur.com/eBjR8i1.jpg">
 
 
 
@@ -133,13 +139,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/10/CentOS7安装Python3-6/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/01/27/教务处引起的验证码识别的机器学习-Python版本/"/>
 
 
 
 
 
-  <title>CentOS7安装Python3.6 | Risk2S</title>
+  <title>教务处引起的验证码识别的机器学习-Python版本 | Risk2S</title>
   
 
 
@@ -336,7 +342,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/10/CentOS7安装Python3-6/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/27/教务处引起的验证码识别的机器学习-Python版本/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TT">
@@ -353,7 +359,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">CentOS7安装Python3.6</h1>
+          <h1 class="post-title" itemprop="name headline">教务处引起的验证码识别的机器学习-Python版本</h1>
         
 
         <div class="post-meta">
@@ -365,8 +371,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-10T11:50:09+08:00">
-                2018-01-10
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-27T13:35:40+08:00">
+                2018-01-27
               </time>
             
 
@@ -376,28 +382,6 @@
           </span>
 
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程技术/" itemprop="url" rel="index">
-                    <span itemprop="name">编程技术</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -405,7 +389,7 @@
 
           
           
-             <span id="/2018/01/10/CentOS7安装Python3-6/" class="leancloud_visitors" data-flag-title="CentOS7安装Python3.6">
+             <span id="/2018/01/27/教务处引起的验证码识别的机器学习-Python版本/" class="leancloud_visitors" data-flag-title="教务处引起的验证码识别的机器学习-Python版本">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -436,26 +420,53 @@
       
 
       
-        <p>安装python3.6可能使用的依赖<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install openssl-devel bzip2-devel expat-devel gdbm-devel readline-devel sqlite-devel gcc</span><br></pre></td></tr></table></figure></p>
-<p>下载python3.6编译安装<br>到python官网下载<a href="https://www.python.org" target="_blank" rel="noopener">https://www.python.org</a><br>下载最新版源码，使用make altinstall，如果使用make install，在系统中将会有两个不同版本的Python在/usr/bin/目录中。这将会导致很多问题，而且不好处理。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://www.python.org/ftp/python/3.6.0/Python-3.6.0.tgz</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xzvf Python-3.6.0.tgz -C  /tmp</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span>  /tmp/Python-3.6.0/</span><br></pre></td></tr></table></figure>
-<p>把Python3.6安装到 /usr/local 目录<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/<span class="built_in">local</span></span><br></pre></td></tr></table></figure></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make altinstall</span><br></pre></td></tr></table></figure>
-<p>python3.6程序的执行文件：/usr/local/bin/python3.6<br>python3.6应用程序目录：/usr/local/lib/python3.6<br>pip3的执行文件：/usr/local/bin/pip3.6<br>pyenv3的执行文件：/usr/local/bin/pyenv-3.6</p>
-<p>更改/usr/bin/python链接<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span>/usr/bin</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv  python python.backup</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/<span class="built_in">local</span>/bin/python3.6 /usr/bin/python</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/<span class="built_in">local</span>/bin/python3.6 /usr/bin/python3</span><br></pre></td></tr></table></figure>
-<p>更改yum脚本的python依赖<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /usr/bin</span><br></pre></td></tr></table></figure></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls yum*</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum yum-config-manager yum-debug-restore yum-groups-manager</span><br></pre></td></tr></table></figure>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum-builddep yum-debug-dump yumdownloader</span><br></pre></td></tr></table></figure>
-<p>更改以上文件头为<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python 改为 #!/usr/bin/python2</span></span><br></pre></td></tr></table></figure></p>
-<p>修改gnome-tweak-tool配置文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># vi /usr/bin/gnome-tweak-tool</span></span><br><span class="line"><span class="comment">#!/usr/bin/python 改为 #!/usr/bin/python2</span></span><br></pre></td></tr></table></figure></p>
-<p>修改urlgrabber配置文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># vi /usr/libexec/urlgrabber-ext-down</span></span><br></pre></td></tr></table></figure></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/python 改为 #!/usr/bin/python2</span></span><br></pre></td></tr></table></figure>
+        <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>验证码识别涉及很多方面的内容。入手难度大,但是入手后,可拓展性又非常广泛,可玩性极强,成就感也很足。</p>
+<p>验证码内的字符识别主要以机器学习的分类算法来完成,目前我所利用的字符识别的算法为KNN(K邻近算法)和SVM (支持向量机算法)</p>
+<p>本文使用SVM，适合初学者，简单易懂，效果显著</p>
+<h2 id="准备工具"><a href="#准备工具" class="headerlink" title="准备工具"></a>准备工具</h2><ul>
+<li>Python3.6</li>
+<li>libsvm （svm机器学习库）</li>
+<li>PIL    （图像处理库）</li>
+</ul>
+<h2 id="大致流程"><a href="#大致流程" class="headerlink" title="大致流程"></a>大致流程</h2><ol>
+<li>抓取原始图片素材（验证码图片）</li>
+<li>原始图片处理    （灰度化）</li>
+<li>图片切割    （图片切割成单个字符的小图片）</li>
+<li>图片尺寸归一化 （小图片变为同种格式）</li>
+<li>图片字符标记    （人工分类小图片，并打标）</li>
+<li>图片特征提取</li>
+<li>得到特定格式的特征训练集</li>
+<li>通过模型实现图片验证码</li>
+</ol>
+<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><ul>
+<li>Libsvm下载    <a href="https://www.csie.ntu.edu.tw/~cjlin/libsvm/oldfiles/" title="libsvm" target="_blank" rel="noopener">https://www.csie.ntu.edu.tw/~cjlin/libsvm/oldfiles/</a><br>将libsvm包放入C:\Python36\Lib\site-packages目录下<br>如果svmutil.py, line 5 报错<br>将其5、6 行的from svm import <em>改为from .svm import </em></li>
+<li>PIL    numpy    os    sys    requests    bs4(beautifulsoup4)    pytesser3</li>
+</ul>
+<p>pytesser3    OCR in Python using the Tesseract engine from Google。是谷歌OCR开源项目的一个模块，可将图片中的文字转换成文本（主要是英文）。</p>
+<p>在这里，pytesser,我觉得识别效果一般，所以我就没使用。</p>
+<h3 id="批量抓取验证码图片"><a href="#批量抓取验证码图片" class="headerlink" title="批量抓取验证码图片"></a>批量抓取验证码图片</h3><p>通过在某网站登录处获取验证码<br><img src="https://i.imgur.com/eBjR8i1.jpg" alt="验证码总览"><br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 验证码下载</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_pic</span><span class="params">(s ,pic_name)</span>:</span></span><br><span class="line">    <span class="keyword">global</span> codeurl</span><br><span class="line">    path = <span class="string">'images'</span></span><br><span class="line">    isExists=os.path.exists(path)</span><br><span class="line">    <span class="keyword">if</span> isExists != <span class="keyword">True</span>:</span><br><span class="line">        os.makedirs(path)</span><br><span class="line">        print(<span class="string">'文件夹'</span>+path+<span class="string">' 创建成功'</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line">    <span class="comment"># 得到验证码图片</span></span><br><span class="line">    rcode = s.get(codeurl)</span><br><span class="line">    f = open(<span class="string">'./images/&#123;&#125;.png'</span>.format(pic_name), <span class="string">'wb'</span>)</span><br><span class="line">    f.write(rcode.content)</span><br><span class="line">    f.close()</span><br><span class="line">    print(pic_name,<span class="string">"\t图片写入成功！"</span>)</span><br><span class="line"><span class="comment"># 利用session 保持同步</span></span><br><span class="line">s = requests.Session()</span><br><span class="line"><span class="comment"># 图片数量</span></span><br><span class="line">end_num = <span class="number">100</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">0</span>,end_num):</span><br><span class="line">    pic_name = <span class="string">'pic_'</span>+str(i)</span><br><span class="line">    get_pic(s, pic_name)</span><br></pre></td></tr></table></figure></p>
+<h2 id="图像处理"><a href="#图像处理" class="headerlink" title="图像处理"></a>图像处理</h2><p>图片处理，是为了减少后面训练时的复杂。</p>
+<h3 id="图片二值化"><a href="#图片二值化" class="headerlink" title="图片二值化"></a>图片二值化</h3><ol>
+<li>将RGB彩图转为灰度图</li>
+<li>将灰度图按照设定阈值转化为二值图<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_bin_table</span><span class="params">(threshold=<span class="number">140</span>)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    获取灰度转二值的映射table</span></span><br><span class="line"><span class="string">    :param threshold:</span></span><br><span class="line"><span class="string">    :return:table</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    table = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">256</span>):</span><br><span class="line">        <span class="keyword">if</span> i &lt; threshold:</span><br><span class="line">            table.append(<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            table.append(<span class="number">1</span>)</span><br><span class="line">    <span class="keyword">return</span> table</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>这里阈值需要自己通过图片对比来自行调整，感觉最合适的值即可，我设的是200.</p>
+<h3 id="图片切割"><a href="#图片切割" class="headerlink" title="图片切割"></a>图片切割</h3><p>将验证码图片 切割成 只包含单个字符的图片</p>
+<p>使用图像编辑软件（Photoshop）打开验证码图片，放大到像素级别，观察其它一些参数特点<br><img src="https://i.imgur.com/pM8H3NF.jpg" alt="原子级"><br>仔细观察，可以看到一格一格的像素点。<br>这里统一将图片(52<em>18)切割成8</em>18格式的小图片<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_crop_imgs</span><span class="params">(img)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    按照图片的特点,进行切割,这个要根据具体的验证码来进行工作.</span></span><br><span class="line"><span class="string">    :param img</span></span><br><span class="line"><span class="string">    :return:child_img_list</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    child_img_list = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">4</span>):</span><br><span class="line">        x = <span class="number">2</span> + i * (<span class="number">8</span> + <span class="number">5</span>)  <span class="comment"># 见原理图</span></span><br><span class="line">        y = <span class="number">0</span></span><br><span class="line">        child_img = img.crop((x, y, x + <span class="number">8</span>, y + <span class="number">18</span>))</span><br><span class="line">        child_img_list.append(child_img)</span><br><span class="line">    <span class="keyword">return</span> child_img_list</span><br><span class="line">	<span class="comment"># 分割图片</span></span><br><span class="line">    images = get_crop_imgs(out)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> images:</span><br><span class="line">        o = i.resize((<span class="number">8</span>, <span class="number">18</span>))</span><br><span class="line">        o.save(<span class="string">'./tmp/'</span>+str(n)+<span class="string">'.png'</span>,<span class="string">'PNG'</span>)</span><br><span class="line">        n += <span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="尺寸归一化"><a href="#尺寸归一化" class="headerlink" title="尺寸归一化"></a>尺寸归一化</h3><p>将数据集整合为统一格式的状态文件</p>
+<p>resize((8, 18))</p>
+<h2 id="模型训练"><a href="#模型训练" class="headerlink" title="模型训练"></a>模型训练</h2><p>基本步骤：</p>
+<ol>
+<li>准备图片素材</li>
+<li>人工对图片打上标签</li>
+<li>得到图片识别特征</li>
+<li>模型训练</li>
+</ol>
+<h3 id="素材准备"><a href="#素材准备" class="headerlink" title="素材准备"></a>素材准备</h3><p>剔除单个字符小图片其中一个难以辨认的图片。</p>
+<h3 id="人工打标"><a href="#人工打标" class="headerlink" title="人工打标"></a>人工打标</h3><p>这一个是工作量最大，也是最无聊的阶段，<br>就是将众多单个字符小图片放入0-9这10个文件夹中。<br>但这一部也是最简单的，靠眼睛认即可。<br><img src="https://i.imgur.com/0tO8tBQ.jpg" alt="0-9图片"><br>例如4文件夹<br><img src="https://i.imgur.com/RbwkbIe.jpg" alt="4"></p>
+<h3 id="特征提取"><a href="#特征提取" class="headerlink" title="特征提取"></a>特征提取</h3><p>字符图片 宽8个像素，高18个像素,经过降维之后可以得到18维的一组特征。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#获取指定图片的特征值</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_feature</span><span class="params">(img)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    获取指定图片的特征值,</span></span><br><span class="line"><span class="string">    1. 按照每排的像素点,高度为18,则有18个维度,然后为8列,总共144个维度</span></span><br><span class="line"><span class="string">    :param img_path:</span></span><br><span class="line"><span class="string">    :return:一个维度为18（高度）的列表</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    width, height = img.size</span><br><span class="line"></span><br><span class="line">    pixel_cnt_list = []</span><br><span class="line">    height = <span class="number">10</span></span><br><span class="line">    <span class="keyword">for</span> y <span class="keyword">in</span> range(height):</span><br><span class="line">        pix_cnt_x = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> x <span class="keyword">in</span> range(width):</span><br><span class="line">            <span class="comment">#  == 0 如果按照示例程序无法提取特征值，如果没有出现，就看看当前像素点的值进行自我处理。</span></span><br><span class="line">            <span class="keyword">if</span> img.getpixel((x, y)) &lt; <span class="number">240</span>:  <span class="comment"># 黑色点</span></span><br><span class="line">                pix_cnt_x += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        pixel_cnt_list.append(pix_cnt_x)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> x <span class="keyword">in</span> range(width):</span><br><span class="line">        pix_cnt_y = <span class="number">0</span></span><br><span class="line">        <span class="keyword">for</span> y <span class="keyword">in</span> range(height):</span><br><span class="line">            <span class="keyword">if</span> img.getpixel((x, y)) &lt; <span class="number">240</span>:  <span class="comment"># 黑色点</span></span><br><span class="line">                pix_cnt_y += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        pixel_cnt_list.append(pix_cnt_y)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> pixel_cnt_list</span><br><span class="line"></span><br><span class="line"><span class="comment"># 得到特征值文件</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_fea_file</span><span class="params">(img_path,n,flag_print)</span>:</span></span><br><span class="line">    <span class="comment"># 遍历图片文件</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> os.walk(img_path + <span class="string">'/'</span> + str(n)):</span><br><span class="line">        im_list = i[<span class="number">2</span>]</span><br><span class="line">    <span class="keyword">for</span> im_file <span class="keyword">in</span> im_list:</span><br><span class="line">        im_name = <span class="string">'./'</span> + img_path + <span class="string">'/'</span> + str(n) + <span class="string">'/'</span> + im_file</span><br><span class="line">        <span class="comment"># print(im_name)</span></span><br><span class="line">        im = Image.open(im_name)</span><br><span class="line">        <span class="comment">#  特征选择</span></span><br><span class="line">        im_feature = get_feature(im)</span><br><span class="line">        <span class="comment"># print(im_feature)</span></span><br><span class="line">        z_index = <span class="number">1</span></span><br><span class="line">        <span class="keyword">if</span> os.path.exists(str(n) + <span class="string">'_feature.txt'</span>):</span><br><span class="line">            ctreate_file = <span class="keyword">False</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            ctreate_file = <span class="keyword">True</span></span><br><span class="line">        <span class="comment"># f = open(str(n) + '_feature.txt', 'a')</span></span><br><span class="line">        <span class="comment"># f = open(str(n) + '_feature.txt', 'a')</span></span><br><span class="line">        <span class="comment">#单个特征值文件</span></span><br><span class="line">        f = open(<span class="string">'feature.txt'</span>, <span class="string">'a'</span>)</span><br><span class="line">        <span class="keyword">if</span> ctreate_file:</span><br><span class="line">            <span class="keyword">if</span> flag_print:</span><br><span class="line">                <span class="keyword">for</span> z <span class="keyword">in</span> im_feature:</span><br><span class="line">                    <span class="keyword">if</span> z_index == <span class="number">1</span>:</span><br><span class="line">                        print(n, end=<span class="string">' '</span>)</span><br><span class="line">                        f.write(str(n) + <span class="string">' '</span>)</span><br><span class="line">                    print(str(z_index) + <span class="string">':'</span> + str(z), end=<span class="string">' '</span>)</span><br><span class="line">                    f.write(str(z_index) + <span class="string">':'</span> + str(z) + <span class="string">' '</span>)</span><br><span class="line">                    z_index += <span class="number">1</span></span><br><span class="line">                print(<span class="string">''</span>)</span><br><span class="line">                f.write(<span class="string">'\n'</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">for</span> z <span class="keyword">in</span> im_feature:</span><br><span class="line">                    <span class="keyword">if</span> z_index == <span class="number">1</span>:</span><br><span class="line">                        f.write(str(n) + <span class="string">' '</span>)</span><br><span class="line">                    f.write(str(z_index) + <span class="string">':'</span> + str(z) + <span class="string">' '</span>)</span><br><span class="line">                    z_index += <span class="number">1</span></span><br><span class="line">                f.write(<span class="string">'\n'</span>)</span><br><span class="line">    f.close()</span><br></pre></td></tr></table></figure></p>
+
       
     </div>
     
@@ -470,6 +481,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/机器学习/" rel="tag"># 机器学习</a>
+          
+        </div>
+      
 
       
       
@@ -479,8 +496,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/09/我的世界开始/" rel="next" title="我的世界开始">
-                <i class="fa fa-chevron-left"></i> 我的世界开始
+              <a href="/2018/01/27/windows-cmd下连接网络/" rel="next" title="windows cmd下连接网络">
+                <i class="fa fa-chevron-left"></i> windows cmd下连接网络
               </a>
             
           </div>
@@ -488,10 +505,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/01/10/Windows10无法使用系统的调节亮度功能/" rel="prev" title="Windows10无法使用系统的调节亮度功能">
-                Windows10无法使用系统的调节亮度功能 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -548,8 +561,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -686,6 +708,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工具"><span class="nav-number">2.</span> <span class="nav-text">准备工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#大致流程"><span class="nav-number">3.</span> <span class="nav-text">大致流程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工作"><span class="nav-number">4.</span> <span class="nav-text">准备工作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#下载"><span class="nav-number">4.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#批量抓取验证码图片"><span class="nav-number">4.2.</span> <span class="nav-text">批量抓取验证码图片</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#图像处理"><span class="nav-number">5.</span> <span class="nav-text">图像处理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#图片二值化"><span class="nav-number">5.1.</span> <span class="nav-text">图片二值化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图片切割"><span class="nav-number">5.2.</span> <span class="nav-text">图片切割</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#尺寸归一化"><span class="nav-number">5.3.</span> <span class="nav-text">尺寸归一化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模型训练"><span class="nav-number">6.</span> <span class="nav-text">模型训练</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#素材准备"><span class="nav-number">6.1.</span> <span class="nav-text">素材准备</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#人工打标"><span class="nav-number">6.2.</span> <span class="nav-text">人工打标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特征提取"><span class="nav-number">6.3.</span> <span class="nav-text">特征提取</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
