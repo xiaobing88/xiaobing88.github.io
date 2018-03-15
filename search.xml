@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[我的世界开始]]></title>
-    <url>%2F2018%2F01%2F28%2F%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E5%BC%80%E5%A7%8B%2F</url>
-    <content type="text"><![CDATA[我的blog欢迎你的到来！ origin]]></content>
-      <categories>
-        <category>生活随记</category>
-      </categories>
+    <title><![CDATA[阿里巴巴电话面试-感受记录]]></title>
+    <url>%2F2018%2F02%2F28%2F%E9%98%BF%E9%87%8C%E5%B7%B4%E5%B7%B4%E7%94%B5%E8%AF%9D%E9%9D%A2%E8%AF%95-%E6%84%9F%E5%8F%97%E8%AE%B0%E5%BD%95%2F</url>
+    <content type="text"><![CDATA[因为我投的就是web安全。 网络安全（web）解释 sql注入、xss 数据结构、算法、设计模式 的使用线程、进程、死锁 的概念网络 tcp/ip协议 三次握手计算机网络：https://zhuanlan.zhihu.com/p/24001696TCP协议：https://github.com/jawil/blog/issues/14 操作系统python项目开发中遇到的困难]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[Bypass过waf]]></title>
+    <url>%2F2018%2F02%2F09%2FBypass%E8%BF%87waf%2F</url>
+    <content type="text"><![CDATA[MySQL注入测试123456789mysql的注释有三种方式：1、块注释：/* ….. */2、行注释：#3、行注释：– （–%20，注意后面有一个空格，与SQL标准稍有差别）自MySQL3.23 版以来，可在C 风格的注释中“隐藏” MySQL特有的关键字，注释以“/ * !”而不是以“ / *”起头 现在我们在mysql命令行中执行一下SQL语句：Select * from news where id=1Select * from news /*!where*/id=1 参考http://www.freebuf.com/sectool/161808.html 文章只是抛砖引玉了下,主要是个思路学习过程,使用Pyhton脚本结合了下Mysql内联注释定义了一些特殊符号相当给脚本配合了一个字典达到Fuzz最终的效果，完了之后 也可以对比一下，看一下能过的Fuzz有没有特点的规律 总结一下。当然也可以自己在自定义一些，在测试其他的软WAF不局限于以上这些内容。 名词解释 内联注释：与普通注释相对而言，/!**/只有MySQL能识别。]]></content>
       <tags>
-        <tag>起始</tag>
+        <tag>网络安全</tag>
       </tags>
   </entry>
   <entry>
@@ -87,5 +89,16 @@
       <categories>
         <category>编程技术</category>
       </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[我的博客世界开始]]></title>
+    <url>%2F2017%2F12%2F27%2F%E6%88%91%E7%9A%84%E4%B8%96%E7%95%8C%E5%BC%80%E5%A7%8B%2F</url>
+    <content type="text"><![CDATA[我的blog欢迎你的到来！ 搭建1我想的是慢慢弄，做一个积累。]]></content>
+      <categories>
+        <category>生活随记</category>
+      </categories>
+      <tags>
+        <tag>起始</tag>
+      </tags>
   </entry>
 </search>
