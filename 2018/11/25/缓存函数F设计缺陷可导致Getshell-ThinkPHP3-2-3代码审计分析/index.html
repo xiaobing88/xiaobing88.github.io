@@ -94,19 +94,24 @@
 
 
 
-<meta name="description" content="事前准备 程序：https://pan.baidu.com/s/1jJbnq1w（运行其中一个即可） 一台Ubuntu16的PC主机 一个Jetson TX2开发板(尽量买个[USB]分线器吧，开发板上就只有一个USB接口)  视频教程https://www.youtube.com/watch?v=D7lkth34rgM 开发板烧录">
+<meta name="description" content="漏洞原理 漏洞利用 漏洞分析整个APP中，入口文件,全局安全过滤函数safereplace，对GET、POST参数过滤，然后通过/Core/core.php文件加载核心类，通过URL路由进入相对应的控制器。xlb函数中F(‘xlb‘.$_POST[“orderNo”],$_POST);语句，两个参数未做安全过滤(除了入口文件的全局过滤),定位到\Core\Common\functions.php中">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Nvidia Jetson TX2 安装-使用">
-<meta property="og:url" content="http://yoursite.com/2018/01/25/Nvidia-Jetson-TX2-安装-使用/index.html">
+<meta property="og:title" content="缓存函数F设计缺陷可导致Getshell--ThinkPHP3.2.3代码审计分析">
+<meta property="og:url" content="http://yoursite.com/2018/11/25/缓存函数F设计缺陷可导致Getshell-ThinkPHP3-2-3代码审计分析/index.html">
 <meta property="og:site_name" content="Risk2S">
-<meta property="og:description" content="事前准备 程序：https://pan.baidu.com/s/1jJbnq1w（运行其中一个即可） 一台Ubuntu16的PC主机 一个Jetson TX2开发板(尽量买个[USB]分线器吧，开发板上就只有一个USB接口)  视频教程https://www.youtube.com/watch?v=D7lkth34rgM 开发板烧录">
+<meta property="og:description" content="漏洞原理 漏洞利用 漏洞分析整个APP中，入口文件,全局安全过滤函数safereplace，对GET、POST参数过滤，然后通过/Core/core.php文件加载核心类，通过URL路由进入相对应的控制器。xlb函数中F(‘xlb‘.$_POST[“orderNo”],$_POST);语句，两个参数未做安全过滤(除了入口文件的全局过滤),定位到\Core\Common\functions.php中">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://i.imgur.com/dVKJPEd.jpg">
-<meta property="og:updated_time" content="2018-01-27T07:49:54.769Z">
+<meta property="og:image" content="https://i.imgur.com/PdoeqWd.png">
+<meta property="og:image" content="https://i.imgur.com/OJv7EWv.png">
+<meta property="og:image" content="https://i.imgur.com/m0CZMDw.png">
+<meta property="og:image" content="https://i.imgur.com/RXi9gWY.png">
+<meta property="og:image" content="https://i.imgur.com/0yBQlCQ.png">
+<meta property="og:image" content="https://i.imgur.com/AmVkhzq.png">
+<meta property="og:updated_time" content="2018-11-25T11:18:11.020Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Nvidia Jetson TX2 安装-使用">
-<meta name="twitter:description" content="事前准备 程序：https://pan.baidu.com/s/1jJbnq1w（运行其中一个即可） 一台Ubuntu16的PC主机 一个Jetson TX2开发板(尽量买个[USB]分线器吧，开发板上就只有一个USB接口)  视频教程https://www.youtube.com/watch?v=D7lkth34rgM 开发板烧录">
-<meta name="twitter:image" content="https://i.imgur.com/dVKJPEd.jpg">
+<meta name="twitter:title" content="缓存函数F设计缺陷可导致Getshell--ThinkPHP3.2.3代码审计分析">
+<meta name="twitter:description" content="漏洞原理 漏洞利用 漏洞分析整个APP中，入口文件,全局安全过滤函数safereplace，对GET、POST参数过滤，然后通过/Core/core.php文件加载核心类，通过URL路由进入相对应的控制器。xlb函数中F(‘xlb‘.$_POST[“orderNo”],$_POST);语句，两个参数未做安全过滤(除了入口文件的全局过滤),定位到\Core\Common\functions.php中">
+<meta name="twitter:image" content="https://i.imgur.com/PdoeqWd.png">
 
 
 
@@ -135,13 +140,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/01/25/Nvidia-Jetson-TX2-安装-使用/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/11/25/缓存函数F设计缺陷可导致Getshell-ThinkPHP3-2-3代码审计分析/"/>
 
 
 
 
 
-  <title>Nvidia Jetson TX2 安装-使用 | Risk2S</title>
+  <title>缓存函数F设计缺陷可导致Getshell--ThinkPHP3.2.3代码审计分析 | Risk2S</title>
   
 
 
@@ -338,7 +343,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/01/25/Nvidia-Jetson-TX2-安装-使用/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/25/缓存函数F设计缺陷可导致Getshell-ThinkPHP3-2-3代码审计分析/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="TT">
@@ -355,7 +360,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Nvidia Jetson TX2 安装-使用</h1>
+          <h1 class="post-title" itemprop="name headline">缓存函数F设计缺陷可导致Getshell--ThinkPHP3.2.3代码审计分析</h1>
         
 
         <div class="post-meta">
@@ -367,8 +372,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-01-25T18:36:17+08:00">
-                2018-01-25
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-25T19:06:02+08:00">
+                2018-11-25
               </time>
             
 
@@ -378,6 +383,28 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/网络安全/" itemprop="url" rel="index">
+                    <span itemprop="name">网络安全</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -385,7 +412,7 @@
 
           
           
-             <span id="/2018/01/25/Nvidia-Jetson-TX2-安装-使用/" class="leancloud_visitors" data-flag-title="Nvidia Jetson TX2 安装-使用">
+             <span id="/2018/11/25/缓存函数F设计缺陷可导致Getshell-ThinkPHP3-2-3代码审计分析/" class="leancloud_visitors" data-flag-title="缓存函数F设计缺陷可导致Getshell--ThinkPHP3.2.3代码审计分析">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -416,13 +443,12 @@
       
 
       
-        <h2 id="事前准备"><a href="#事前准备" class="headerlink" title="事前准备"></a>事前准备</h2><ol>
-<li>程序：<a href="https://pan.baidu.com/s/1jJbnq1w" title="百度云盘" target="_blank" rel="noopener">https://pan.baidu.com/s/1jJbnq1w</a>（运行其中一个即可）</li>
-<li>一台Ubuntu16的PC主机</li>
-<li>一个Jetson TX2开发板(尽量买个[USB]分线器吧，开发板上就只有一个USB接口)</li>
-</ol>
-<h2 id="视频教程"><a href="#视频教程" class="headerlink" title="视频教程"></a>视频教程</h2><p><strong><a href="https://www.youtube.com/watch?v=D7lkth34rgM" target="_blank" rel="noopener">https://www.youtube.com/watch?v=D7lkth34rgM</a></strong></p>
-<h2 id="开发板烧录"><a href="#开发板烧录" class="headerlink" title="开发板烧录"></a>开发板烧录</h2><p><img src="https://i.imgur.com/dVKJPEd.jpg" alt="TX2"></p>
+        <h2 id="漏洞原理"><a href="#漏洞原理" class="headerlink" title="漏洞原理"></a>漏洞原理</h2><p><img src="https://i.imgur.com/PdoeqWd.png" alt=""></p>
+<h2 id="漏洞利用"><a href="#漏洞利用" class="headerlink" title="漏洞利用"></a>漏洞利用</h2><p><img src="https://i.imgur.com/OJv7EWv.png" alt=""><br><img src="https://i.imgur.com/m0CZMDw.png" alt=""><br><img src="https://i.imgur.com/RXi9gWY.png" alt=""></p>
+<h2 id="漏洞分析"><a href="#漏洞分析" class="headerlink" title="漏洞分析"></a>漏洞分析</h2><p>整个APP中，入口文件,全局安全过滤函数safe<em>replace，对GET、POST参数过滤，<br>然后通过/Core/core.php文件加载核心类，通过URL路由进入相对应的控制器。<br>xlb函数中F(‘xlb</em>‘.$_POST[“orderNo”],$_POST);语句，两个参数未做安全过滤(除了入口文件的全局过滤),定位到\Core\Common\functions.php中的F函数，<br><img src="https://i.imgur.com/0yBQlCQ.png" alt=""><br>由Think\Storage::put($filename,serialize($value),’F’);定位到：<br>/Core/Library/Think/Storage/Driver/File.class.php的put函数<br><img src="https://i.imgur.com/AmVkhzq.png" alt=""></p>
+<blockquote>
+<p>其中直接使用file_put_contents函数将payload存入文件中，造成getshell。<br>payload构造：orderNo参数为文件名的一部分，重点在第二个参数，键值被入口文件的safe_replace函数过滤，字符替换，根据php代码的格式，&lt;?php?&gt;等字符中尖括号被替换过滤，所以恶意代码放在键名中，PHP变量中不允许出现[、]、空格等特殊字符，并被替换为下划线【PHP将自动将传入变量名中的任何chr(32)()(空格)chr(46)(.)(点)chr(91)( [)(开放方括号)chr(128)-chr(159)(各种) 替换为下划线】，所以采用&lt;?=&gt;、file_put_contents写入一句话木马、base64编码等绕过操作，并将payload进行URLencode编码，访问即可执行代码生成一句话木马。</p>
+</blockquote>
 
       
     </div>
@@ -447,8 +473,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/01/25/Python图片处理模块skimage/" rel="next" title="Python图片处理模块skimage">
-                <i class="fa fa-chevron-left"></i> Python图片处理模块skimage
+              <a href="/2018/11/25/pyInstaller生成的Python-EXE中获取应用程序路径/" rel="next" title="pyInstaller生成的Python-EXE中获取应用程序路径">
+                <i class="fa fa-chevron-left"></i> pyInstaller生成的Python-EXE中获取应用程序路径
               </a>
             
           </div>
@@ -457,8 +483,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/01/27/windows-cmd下连接网络/" rel="prev" title="windows cmd下连接网络">
-                windows cmd下连接网络 <i class="fa fa-chevron-right"></i>
+              <a href="/2018/11/25/EXP表达式存在SQL注入-ThinkPHP3-2-3代码审计分析/" rel="prev" title="EXP表达式存在SQL注入--ThinkPHP3.2.3代码审计分析">
+                EXP表达式存在SQL注入--ThinkPHP3.2.3代码审计分析 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -541,7 +567,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -552,7 +578,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -673,7 +699,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#事前准备"><span class="nav-number">1.</span> <span class="nav-text">事前准备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#视频教程"><span class="nav-number">2.</span> <span class="nav-text">视频教程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发板烧录"><span class="nav-number">3.</span> <span class="nav-text">开发板烧录</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#漏洞原理"><span class="nav-number">1.</span> <span class="nav-text">漏洞原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#漏洞利用"><span class="nav-number">2.</span> <span class="nav-text">漏洞利用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#漏洞分析"><span class="nav-number">3.</span> <span class="nav-text">漏洞分析</span></a></li></ol></div>
             
 
           </div>

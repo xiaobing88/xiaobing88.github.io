@@ -94,13 +94,22 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Risk2S">
-<meta property="og:url" content="http://yoursite.com/tags/起始/index.html">
+<meta name="description" content="漏洞原理 Thinkphp SQL查询：EXP：表达式，支持更复杂的查询情况，exp查询的条件不会被当成字符串，所以后面的查询条件可以使用任何SQL支持的语法，包括使用函数和字段名称。查询表达式不仅可用于查询条件，也可以用于数据更新。  漏洞利用 $_GET[‘state’]参数未经过安全过滤，然后直接带入到SQL查询语句中  漏洞分析 其中传入数组第一个值为“exp”，则将数组第二个值直接拼接至">
+<meta property="og:type" content="article">
+<meta property="og:title" content="EXP表达式存在SQL注入--ThinkPHP3.2.3代码审计分析">
+<meta property="og:url" content="http://yoursite.com/2018/11/25/EXP表达式存在SQL注入-ThinkPHP3-2-3代码审计分析/index.html">
 <meta property="og:site_name" content="Risk2S">
+<meta property="og:description" content="漏洞原理 Thinkphp SQL查询：EXP：表达式，支持更复杂的查询情况，exp查询的条件不会被当成字符串，所以后面的查询条件可以使用任何SQL支持的语法，包括使用函数和字段名称。查询表达式不仅可用于查询条件，也可以用于数据更新。  漏洞利用 $_GET[‘state’]参数未经过安全过滤，然后直接带入到SQL查询语句中  漏洞分析 其中传入数组第一个值为“exp”，则将数组第二个值直接拼接至">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://i.imgur.com/OOVKUr2.png">
+<meta property="og:image" content="https://i.imgur.com/Sa05cai.png">
+<meta property="og:image" content="https://i.imgur.com/NVI3XYF.png">
+<meta property="og:image" content="https://i.imgur.com/IAg1QcK.png">
+<meta property="og:updated_time" content="2018-11-25T11:30:23.857Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Risk2S">
+<meta name="twitter:title" content="EXP表达式存在SQL注入--ThinkPHP3.2.3代码审计分析">
+<meta name="twitter:description" content="漏洞原理 Thinkphp SQL查询：EXP：表达式，支持更复杂的查询情况，exp查询的条件不会被当成字符串，所以后面的查询条件可以使用任何SQL支持的语法，包括使用函数和字段名称。查询表达式不仅可用于查询条件，也可以用于数据更新。  漏洞利用 $_GET[‘state’]参数未经过安全过滤，然后直接带入到SQL查询语句中  漏洞分析 其中传入数组第一个值为“exp”，则将数组第二个值直接拼接至">
+<meta name="twitter:image" content="https://i.imgur.com/OOVKUr2.png">
 
 
 
@@ -129,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/起始/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/11/25/EXP表达式存在SQL注入-ThinkPHP3-2-3代码审计分析/"/>
 
 
 
 
 
-  <title>标签: 起始 | Risk2S</title>
+  <title>EXP表达式存在SQL注入--ThinkPHP3.2.3代码审计分析 | Risk2S</title>
   
 
 
@@ -160,7 +169,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -318,54 +327,181 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>起始<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/11/25/EXP表达式存在SQL注入-ThinkPHP3-2-3代码审计分析/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="TT">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Risk2S">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2017/12/27/我的世界开始/" itemprop="url">
-              
-                <span itemprop="name">我的博客世界开始</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">EXP表达式存在SQL注入--ThinkPHP3.2.3代码审计分析</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-27T13:35:40+08:00"
-              content="2017-12-27" >
-          12-27
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-11-25T19:24:11+08:00">
+                2018-11-25
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/网络安全/" itemprop="url" rel="index">
+                    <span itemprop="name">网络安全</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/11/25/EXP表达式存在SQL注入-ThinkPHP3-2-3代码审计分析/" class="leancloud_visitors" data-flag-title="EXP表达式存在SQL注入--ThinkPHP3.2.3代码审计分析">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="漏洞原理"><a href="#漏洞原理" class="headerlink" title="漏洞原理"></a>漏洞原理</h2><blockquote>
+<p>Thinkphp SQL查询：EXP：表达式，支持更复杂的查询情况，<br>exp查询的条件不会被当成字符串，所以后面的查询条件可以使用任何SQL支持的语法，包括使用函数和字段名称。查询表达式不仅可用于查询条件，也可以用于数据更新。</p>
+</blockquote>
+<h2 id="漏洞利用"><a href="#漏洞利用" class="headerlink" title="漏洞利用"></a>漏洞利用</h2><blockquote>
+<p>$_GET[‘state’]参数未经过安全过滤，然后直接带入到SQL查询语句中<br><img src="https://i.imgur.com/OOVKUr2.png" alt=""></p>
+</blockquote>
+<h2 id="漏洞分析"><a href="#漏洞分析" class="headerlink" title="漏洞分析"></a>漏洞分析</h2><p><img src="https://i.imgur.com/Sa05cai.png" alt=""><br><img src="https://i.imgur.com/NVI3XYF.png" alt=""><br><img src="https://i.imgur.com/IAg1QcK.png" alt=""></p>
+<p>其中传入数组第一个值为“exp”，则将数组第二个值直接拼接至where子句。</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/25/缓存函数F设计缺陷可导致Getshell-ThinkPHP3-2-3代码审计分析/" rel="next" title="缓存函数F设计缺陷可导致Getshell--ThinkPHP3.2.3代码审计分析">
+                <i class="fa fa-chevron-left"></i> 缓存函数F设计缺陷可导致Getshell--ThinkPHP3.2.3代码审计分析
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -373,6 +509,15 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzEwNC85NjYz">
+  </div>
+
+    
+
+  </div>
+
 
         </div>
         
@@ -393,8 +538,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.gif"
@@ -532,6 +686,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#漏洞原理"><span class="nav-number">1.</span> <span class="nav-text">漏洞原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#漏洞利用"><span class="nav-number">2.</span> <span class="nav-text">漏洞利用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#漏洞分析"><span class="nav-number">3.</span> <span class="nav-text">漏洞分析</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -649,10 +819,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
@@ -693,6 +863,25 @@
      
    
   
+    <!-- 来必力City版安装代码 -->
+    <div id="lv-container" data-id="city" data-uid="MTAyMC8zMzEwNC85NjYz">
+      <script type="text/javascript">
+       (function(d, s) {
+           var j, e = d.getElementsByTagName(s)[0];
+
+           if (typeof LivereTower === 'function') { return; }
+
+           j = d.createElement(s);
+           j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+           j.async = true;
+
+           e.parentNode.insertBefore(j, e);
+       })(document, 'script');
+      </script>
+    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div>
+    <!-- City版安装代码已完成 -->
+   
  
 
   
