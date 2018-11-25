@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[GitPage之Hexo环境]]></title>
     <url>%2F2018%2F11%2F25%2FGitPage%E4%B9%8BHexo%E7%8E%AF%E5%A2%83%2F</url>
-    <content type="text"><![CDATA[Hexo环境搭建Git安装Git 配置Git Node.js Hexo的安装使用 npm 即可完成 Hexo 的安装： npm install -g hexo-cli 常用命令生成静态文件：hexo g ##参考资料文档| Hexo]]></content>
+    <content type="text"><![CDATA[Hexo环境搭建Git安装Git 配置Git Node.js Hexo的安装使用 npm 即可完成 Hexo 的安装： npm install -g hexo-cli 常用命令hexo 基本使用命令生成静态文件：hexo g 新建一篇文章：hexo new [layout] &lt;title&gt; 启动服务器：hexo server 部署网站：hexo d 清除缓存文件：hexo clean 列出网站资料:hexo list &lt;type&gt; Hexo生成完毕后自动部署网站：hexo d-g ##参考资料文档| Hexo]]></content>
       <categories>
         <category>编程</category>
       </categories>
@@ -20,11 +20,6 @@
     <title><![CDATA[windows cmd下连接网络]]></title>
     <url>%2F2018%2F01%2F27%2Fwindows-cmd%E4%B8%8B%E8%BF%9E%E6%8E%A5%E7%BD%91%E7%BB%9C%2F</url>
     <content type="text"><![CDATA[cmd下命令行拨号rasdial 网络连接名称 宽带连接账号 宽带连接密码 1rasdial 徐徐徐F 2***9***1@s***u 19*****70 cmd下命令行开启WIFI热点netsh wlan set hostednetwork mode=allow ssid=热点名称 key=热点密码 启动热点 netsh wlan start hostednetwork 12netsh wlan set hostednetwork mode=allow ssid=risk key=risk2snetsh wlan start hostednetwork]]></content>
-  </entry>
-  <entry>
-    <title><![CDATA[Nvidia Jetson TX2 安装-使用]]></title>
-    <url>%2F2018%2F01%2F25%2FNvidia-Jetson-TX2-%E5%AE%89%E8%A3%85-%E4%BD%BF%E7%94%A8%2F</url>
-    <content type="text"><![CDATA[事前准备 程序：https://pan.baidu.com/s/1jJbnq1w（运行其中一个即可） 一台Ubuntu16的PC主机 一个Jetson TX2开发板(尽量买个[USB]分线器吧，开发板上就只有一个USB接口) 视频教程https://www.youtube.com/watch?v=D7lkth34rgM 开发板烧录]]></content>
   </entry>
   <entry>
     <title><![CDATA[Python图片处理模块skimage]]></title>
@@ -61,7 +56,7 @@
   <entry>
     <title><![CDATA[python的isinstance方法]]></title>
     <url>%2F2018%2F01%2F12%2Fpython%E7%9A%84isinstance%E6%96%B9%E6%B3%95%2F</url>
-    <content type="text"><![CDATA[Python的isinstance方法12&gt;&gt;&gt; dir(isinstance)['__call__', '__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__name__', '__ne__', '__new__', '__qualname__', '__reduce__', '__reduce_ex__', '__repr__', '__self__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__text_signature__'] 123456789&gt;&gt;&gt; help(isinstance)Help on built-in function isinstance in module builtins:isinstance(obj, class_or_tuple, /) Return whether an object is an instance of a class or of a subclass thereof. A tuple, as in ``isinstance(x, (A, B, ...))``, may be given as the target to check against. This is equivalent to ``isinstance(x, A) or isinstance(x, B) or ...`` etc. isinstance 用法12345&gt;&gt;&gt; isinstance(1, int)True&gt;&gt;&gt; isinstance("risk2s", str)True&gt;&gt;&gt;]]></content>
+    <content type="text"><![CDATA[Python的isinstance方法 主要是判断参数的类型是否为正确 12&gt;&gt;&gt; dir(isinstance)['__call__', '__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__name__', '__ne__', '__new__', '__qualname__', '__reduce__', '__reduce_ex__', '__repr__', '__self__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__text_signature__'] 123456789&gt;&gt;&gt; help(isinstance)Help on built-in function isinstance in module builtins:isinstance(obj, class_or_tuple, /) Return whether an object is an instance of a class or of a subclass thereof. A tuple, as in ``isinstance(x, (A, B, ...))``, may be given as the target to check against. This is equivalent to ``isinstance(x, A) or isinstance(x, B) or ...`` etc. isinstance 用法12345&gt;&gt;&gt; isinstance(1, int)True&gt;&gt;&gt; isinstance("risk2s", str)True&gt;&gt;&gt;]]></content>
       <categories>
         <category>编程技术</category>
       </categories>
